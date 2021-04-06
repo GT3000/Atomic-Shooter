@@ -47,6 +47,7 @@
                   <e p="UnityEditorProBuilderDynamic.cs" t="Include" />
                 </e>
               </e>
+              <e p="Ludiq.Peek.Editor.asmdef" t="Include" />
               <e p="Plugin" t="Include">
                 <e p="Changelogs" t="Include">
                   <e p="Changelog_1_0_0.cs" t="Include" />
@@ -84,6 +85,8 @@
               <e p="Probe" t="Include">
                 <e p="Probe.cs" t="Include" />
                 <e p="ProbeFilter.cs" t="Include" />
+                <e p="ProbeHighlightEffect.shader" t="Include" />
+                <e p="ProbeHighlightMask.shader" t="Include" />
                 <e p="ProbeHit.cs" t="Include" />
                 <e p="ProbeHitSelectHandler.cs" t="Include" />
                 <e p="ProbeOption.cs" t="Include" />
@@ -187,8 +190,66 @@
                 <e p="SceneViewUtility.cs" t="Include" />
               </e>
             </e>
+            <e p="LICENSES.txt" t="Include" />
           </e>
           <e p="Ludiq.PeekCore" t="Include">
+            <e p="DotNetDocumentation" t="Include">
+              <e p="Microsoft.Build.Conversion.v3.5.xml" t="Include" />
+              <e p="Microsoft.Build.Engine.xml" t="Include" />
+              <e p="Microsoft.Build.Framework.xml" t="Include" />
+              <e p="Microsoft.Build.Utilities.v3.5.xml" t="Include" />
+              <e p="Microsoft.VisualC.STLCLR.xml" t="Include" />
+              <e p="mscorlib.xml" t="Include" />
+              <e p="System.AddIn.Contract.xml" t="Include" />
+              <e p="System.AddIn.xml" t="Include" />
+              <e p="System.ComponentModel.DataAnnotations.xml" t="Include" />
+              <e p="System.Configuration.Install.xml" t="Include" />
+              <e p="System.Configuration.xml" t="Include" />
+              <e p="System.Core.xml" t="Include" />
+              <e p="System.Data.DataSetExtensions.xml" t="Include" />
+              <e p="System.Data.Entity.Design.xml" t="Include" />
+              <e p="System.Data.Entity.xml" t="Include" />
+              <e p="System.Data.Linq.xml" t="Include" />
+              <e p="System.Data.Services.Client.xml" t="Include" />
+              <e p="System.Data.Services.Design.xml" t="Include" />
+              <e p="System.Data.Services.xml" t="Include" />
+              <e p="System.Data.SqlXml.xml" t="Include" />
+              <e p="System.Data.xml" t="Include" />
+              <e p="System.Deployment.xml" t="Include" />
+              <e p="System.DirectoryServices.AccountManagement.xml" t="Include" />
+              <e p="System.DirectoryServices.xml" t="Include" />
+              <e p="System.Drawing.xml" t="Include" />
+              <e p="System.EnterpriseServices.xml" t="Include" />
+              <e p="System.IdentityModel.xml" t="Include" />
+              <e p="System.Management.Instrumentation.xml" t="Include" />
+              <e p="System.Management.xml" t="Include" />
+              <e p="System.Messaging.xml" t="Include" />
+              <e p="System.Net.xml" t="Include" />
+              <e p="System.Printing.xml" t="Include" />
+              <e p="System.Runtime.Remoting.xml" t="Include" />
+              <e p="System.Runtime.Serialization.Formatters.Soap.xml" t="Include" />
+              <e p="System.Runtime.Serialization.xml" t="Include" />
+              <e p="System.Security.xml" t="Include" />
+              <e p="System.ServiceModel.Web.xml" t="Include" />
+              <e p="System.ServiceModel.xml" t="Include" />
+              <e p="System.ServiceProcess.xml" t="Include" />
+              <e p="System.Transactions.xml" t="Include" />
+              <e p="System.Web.Abstractions.xml" t="Include" />
+              <e p="System.Web.DynamicData.Design.xml" t="Include" />
+              <e p="System.Web.DynamicData.xml" t="Include" />
+              <e p="System.Web.Entity.Design.xml" t="Include" />
+              <e p="System.Web.Entity.xml" t="Include" />
+              <e p="System.Web.Extensions.Design.xml" t="Include" />
+              <e p="System.Web.Extensions.xml" t="Include" />
+              <e p="System.Web.Routing.xml" t="Include" />
+              <e p="System.Web.Services.xml" t="Include" />
+              <e p="System.Windows.Forms.xml" t="Include" />
+              <e p="System.Windows.Presentation.xml" t="Include" />
+              <e p="System.WorkflowServices.xml" t="Include" />
+              <e p="System.xml" t="Include" />
+              <e p="System.Xml.Linq.xml" t="Include" />
+              <e p="System.Xml.xml" t="Include" />
+            </e>
             <e p="Editor" t="Include">
               <e p="Assignment" t="Include">
                 <e p="Assigner.cs" t="Include" />
@@ -502,6 +563,7 @@
                 <e p="Annotations" t="Include">
                   <e p="AnnotationDisabler.cs" t="Include" />
                 </e>
+                <e p="ColoredTexture.shader" t="Include" />
                 <e p="Colors" t="Include">
                   <e p="ColorPalette.cs" t="Include" />
                   <e p="ColorUtility.cs" t="Include" />
@@ -567,6 +629,7 @@
                 <e p="UnityEditorDynamic.cs" t="Include" />
                 <e p="UnityEngineDynamic.cs" t="Include" />
               </e>
+              <e p="Ludiq.PeekCore.Editor.asmdef" t="Include" />
               <e p="Meta" t="Include">
                 <e p="Accessor.cs" t="Include" />
                 <e p="CastAccessor.cs" t="Include" />
@@ -706,6 +769,9 @@
                 <e p="CreateTextureOptions.cs" t="Include" />
                 <e p="EditorAssetResourceProvider.cs" t="Include" />
                 <e p="IResourceProvider.cs" t="Include" />
+              </e>
+              <e p="Resources" t="Include">
+                <e p="CCA3B.txt" t="Include" />
               </e>
               <e p="SemanticLabel.cs" t="Include" />
               <e p="SemanticVersion.cs" t="Include" />
@@ -931,7 +997,15 @@
                   </e>
                 </e>
                 <e p="OdinSerializer" t="Include">
+                  <e p="AOT" t="Include">
+                    <e p="link.xml" t="Include" />
+                  </e>
+                  <e p="EditorOnly" t="Include">
+                    <e p="Ludiq.OdinSerializer.xml" t="Include" />
+                  </e>
+                  <e p="License.txt" t="Include" />
                   <e p="OdinBuildAutomation.cs" t="Include" />
+                  <e p="Version.txt" t="Include" />
                 </e>
               </e>
               <e p="EditorBinding" t="Include">
@@ -999,6 +1073,7 @@
                 <e p="MouseButton.cs" t="Include" />
                 <e p="PressState.cs" t="Include" />
               </e>
+              <e p="Ludiq.PeekCore.Runtime.asmdef" t="Include" />
               <e p="Math" t="Include">
                 <e p="Axes2.cs" t="Include" />
                 <e p="Axis2.cs" t="Include" />
@@ -1232,8 +1307,14 @@
             </e>
           </e>
         </e>
+        <e p="Scripts" t="Include">
+          <e p="Player.cs" t="Include" />
+        </e>
       </e>
       <e p="Atomic Shooter.sln" t="IncludeFlat" />
+      <e p="Ludiq.Peek.Editor.csproj" t="IncludeRecursive" />
+      <e p="Ludiq.PeekCore.Editor.csproj" t="IncludeRecursive" />
+      <e p="Ludiq.PeekCore.Runtime.csproj" t="IncludeRecursive" />
       <e p="obj" t="ExcludeRecursive" />
       <e p="Packages" t="ExcludeRecursive" />
       <e p="Temp\bin" t="ExcludeRecursive" />
