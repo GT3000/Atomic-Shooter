@@ -11,13 +11,17 @@ public class Player : MonoBehaviour
     [SerializeField] private float upperLimit;
     [SerializeField] private float widthLimit;
     private float currentSpeed;
+    [SerializeField] private SpriteRenderer currentThruster;
+    [SerializeField] private Sprite[] thrusters;
+    
 
     // Start is called before the first frame update
     void Start()
     {
         startPos = transform.position;
-        upperLimit = transform.position.y + 1;
         currentSpeed = speed;
+        
+        InvokeRepeating("ThrusterControl", 0.1f, 0.25f);
     }
 
     // Update is called once per frame
@@ -65,6 +69,18 @@ public class Player : MonoBehaviour
             {
                 currentSpeed = 0f;
             }
+        }
+    }
+
+    private void ThrusterControl()
+    {
+        if (currentThruster.sprite == thrusters[0])
+        {
+            currentThruster.sprite = thrusters[1];
+        }
+        else
+        {
+            currentThruster.sprite = thrusters[0];
         }
     }
 }
