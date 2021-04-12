@@ -10,7 +10,6 @@ public class Player : MonoBehaviour
     private Vector3 screenPos;
     [SerializeField] private float speed;
     [SerializeField] private float upperLimit;
-    [SerializeField] private float widthLimit;
     private float currentSpeed;
     [SerializeField] private SpriteRenderer currentThruster;
     [SerializeField] private Sprite[] thrusters;
