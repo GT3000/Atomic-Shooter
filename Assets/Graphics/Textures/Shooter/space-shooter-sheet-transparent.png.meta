@@ -23,6 +23,21 @@ TextureImporter:
   - first:
       213: -3429764931149714170
     second: Blaster_2
+  - first:
+      213: 8052642498117907764
+    second: Cooldown BG Middle
+  - first:
+      213: -7554260230087918429
+    second: Cooldown Fill Black
+  - first:
+      213: 4739183401485464434
+    second: Cooldown BG Left
+  - first:
+      213: -5001242130118543902
+    second: Cooldown BG Right
+  - first:
+      213: -9172863755578401920
+    second: Cooldown Fill White
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -249,7 +264,7 @@ TextureImporter:
         width: 1
         height: 2
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -270,7 +285,7 @@ TextureImporter:
         width: 1
         height: 5
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -278,6 +293,111 @@ TextureImporter:
       bones: []
       spriteID: 60daabf77f60760d0800000000000000
       internalID: -3429764931149714170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooldown BG Middle
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 32
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4353883ffabb0cf60800000000000000
+      internalID: 8052642498117907764
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooldown Fill Black
+      rect:
+        serializedVersion: 2
+        x: 185
+        y: 39
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3acbfbc4850e92790800000000000000
+      internalID: -7554260230087918429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooldown BG Left
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 32
+        width: 9
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 273f7f2c136f4c140800000000000000
+      internalID: 4739183401485464434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooldown BG Right
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 32
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e5f096c7c4089ab0800000000000000
+      internalID: -5001242130118543902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Cooldown Fill White
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 39
+        width: 3
+        height: 3
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08b91b3a30173b080800000000000000
+      internalID: -9172863755578401920
       vertices: []
       indices: 
       edges: []

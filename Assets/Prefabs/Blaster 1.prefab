@@ -155,5 +155,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   damage: 10
+  weaponHeat: 0.5
+  producesHeat: 1
   fireDelay: 0.25
-  timeDelay: 5
+  timeDelayMin: 0.5
+  timeDelayMax: 1.25
+  variableTimeDelay: 0

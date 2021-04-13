@@ -15,14 +15,19 @@ public class Player : MonoBehaviour
     [SerializeField] private Sprite[] thrusters;
     [SerializeField] private Projectile currentProjectile;
     [SerializeField] private Transform[] projectileLocations;
+    [SerializeField] private float currentHeat = 0f;
+    [SerializeField] private float totalHeat = 10f;
+    private bool overHeated = false;
+    private float heatTickDown = 0f;
     private float fireTimePassed;
-
+    private UiManager uiManager;
 
     // Start is called before the first frame update
     void Start()
     {
         startPos = transform.position;
         currentSpeed = speed;
+        uiManager = FindObjectOfType<UiManager>();
     }
 
     // Update is called once per frame
@@ -30,8 +35,7 @@ public class Player : MonoBehaviour
     {
         //tracks player relative to camera in world units
         screenPos = Camera.main.ScreenToWorldPoint(new Vector3(Screen.width, upperLimit, Camera.main.transform.position.z));
-        print(screenPos);
-        
+
         Movement();
         Fire();
     }
@@ -87,14 +91,53 @@ public class Player : MonoBehaviour
         fireTimePassed += Time.deltaTime;
         
         //When timer has elapsed firing delay then fire projectile(s) at firing point(s) and reset the timer
-        if (Input.GetMouseButton(0) && fireTimePassed >= currentProjectile.FireDelay)
+        if (Input.GetMouseButton(0) && fireTimePassed >= currentProjectile.FireDelay && !overHeated)
         {
             foreach (var location in projectileLocations)
             {
                 GameObject tempProjectile = Instantiate(currentProjectile.gameObject, location.position, Quaternion.identity);
+
+                Projectile currentTempProjectile = tempProjectile.GetComponent<Projectile>();
+                
+                if (currentTempProjectile.ProducesHeat)
+                {
+                    if (currentHeat <= totalHeat)
+                    {
+                        currentHeat += currentTempProjectile.WeaponHeat;
+
+                        uiManager.WeaponCoolDown((int)currentHeat);
+                    }
+                    else
+                    {
+                        currentHeat = totalHeat;
+                        overHeated = true;
+                    }
+                }
             }
 
             fireTimePassed = 0f;
+        }
+        else
+        {
+            heatTickDown += Time.deltaTime;
+
+            if (heatTickDown >= 0.9f && currentHeat >= 0)
+            {
+                currentHeat--;
+                heatTickDown = 0;
+
+                if (currentHeat < 4)
+                {
+                    overHeated = false;
+                }
+                
+                if (currentHeat <= 0)
+                {
+                    currentHeat = 0;
+                }
+                
+                uiManager.WeaponCoolDown((int)currentHeat);
+            }
         }
     }
 
