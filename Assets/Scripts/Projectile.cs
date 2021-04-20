@@ -1,6 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Random = UnityEngine.Random;
 
 public class Projectile : MonoBehaviour
 {
@@ -9,11 +11,11 @@ public class Projectile : MonoBehaviour
     [SerializeField] private float weaponHeat;
     [SerializeField] private bool producesHeat;
     [SerializeField] private float fireDelay;
-    [SerializeField] private float timeDelayMin;
-    [SerializeField] private float timeDelayMax;
-    [SerializeField] private bool variableTimeDelay = false;
+    [SerializeField] private float lifetimeMin;
+    [SerializeField] private float lifetimeMax;
+    [SerializeField] private bool variableLifetime = false;
     private float timePassed;
-    private float timeDelayRange;
+    private float lifetimeRange;
 
     public float FireDelay => fireDelay;
     public float WeaponHeat => weaponHeat;
@@ -22,9 +24,9 @@ public class Projectile : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (variableTimeDelay)
+        if (variableLifetime)
         {
-            timeDelayRange = Random.Range(timeDelayMin, timeDelayMax);
+            lifetimeRange = Random.Range(lifetimeMin, lifetimeMax);
         }
     }
 
@@ -39,24 +41,32 @@ public class Projectile : MonoBehaviour
 
     private void TimeDestroy()
     {
-        if (variableTimeDelay)
+        if (variableLifetime)
         {
-            if (timePassed >= timeDelayRange)
+            if (timePassed >= lifetimeRange)
             {
                 DestroyProjectile();
             }
         }
         else
         {
-            if (timePassed >= timeDelayMax)
+            if (timePassed >= lifetimeMax)
             {
                 DestroyProjectile();
             }
         }
     }
 
-    private void DestroyProjectile()
+    public void DestroyProjectile()
     {
         Destroy(gameObject);
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.GetComponent<Enemy>())
+        {
+            DestroyProjectile();
+        }
     }
 }

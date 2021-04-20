@@ -38,6 +38,48 @@ TextureImporter:
   - first:
       213: -9172863755578401920
     second: Cooldown Fill White
+  - first:
+      213: -8997932868308576102
+    second: Laser_1
+  - first:
+      213: -5096547364293888636
+    second: Laser_2
+  - first:
+      213: 2559989183818171655
+    second: Health_Bar_Full_1
+  - first:
+      213: 6500510773170634932
+    second: Health_Bar_Full_2
+  - first:
+      213: 7259906301201208233
+    second: Health_Bar_Full_3
+  - first:
+      213: 2942591702987927948
+    second: Health_Bar_Full_4
+  - first:
+      213: 3762955363510368296
+    second: Health_Bar_Empty_1
+  - first:
+      213: -5487877668723749783
+    second: Health_Bar_Empty_2
+  - first:
+      213: 7874434269356890171
+    second: Health_Bar_Empty_3
+  - first:
+      213: -3870012553211614853
+    second: Health_Bar_Empty_4
+  - first:
+      213: 5503877614608849317
+    second: Portrait_1
+  - first:
+      213: 8483818886069092660
+    second: Mini_Jet_1_Unshielded
+  - first:
+      213: -168750277782727483
+    second: Mini_Jet_2_Unshielded
+  - first:
+      213: 8780302339471179775
+    second: Mini_Jet_3_Unshielded
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -390,7 +432,7 @@ TextureImporter:
         width: 3
         height: 3
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -398,6 +440,300 @@ TextureImporter:
       bones: []
       spriteID: 08b91b3a30173b080800000000000000
       internalID: -9172863755578401920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_1
+      rect:
+        serializedVersion: 2
+        x: 7
+        y: 388
+        width: 2
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a98d7a7babbe02380800000000000000
+      internalID: -8997932868308576102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Laser_2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 391
+        width: 2
+        height: 21
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4853f42cc2d6549b0800000000000000
+      internalID: -5096547364293888636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health_Bar_Full_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 49
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705035a6998e68320800000000000000
+      internalID: 2559989183818171655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health_Bar_Full_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 49
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b08f656b14763a50800000000000000
+      internalID: 6500510773170634932
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health_Bar_Full_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 49
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a3d7b9f05e50c460800000000000000
+      internalID: 7259906301201208233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health_Bar_Full_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 49
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c817b97309f26d820800000000000000
+      internalID: 2942591702987927948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health_Bar_Empty_1
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 65
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 828bfa357f3b83430800000000000000
+      internalID: 3762955363510368296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health_Bar_Empty_2
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 65
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96c0ce8165427d3b0800000000000000
+      internalID: -5487877668723749783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health_Bar_Empty_3
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 65
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b381e285f3c974d60800000000000000
+      internalID: 7874434269356890171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Health_Bar_Empty_4
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 65
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b79e4894614fa4ac0800000000000000
+      internalID: -3870012553211614853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Portrait_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 256
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a91cf99783b16c40800000000000000
+      internalID: 5503877614608849317
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mini_Jet_1_Unshielded
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 500
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 43106e2e3549cb570800000000000000
+      internalID: 8483818886069092660
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mini_Jet_2_Unshielded
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 482
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c41305348a78adf0800000000000000
+      internalID: -168750277782727483
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Mini_Jet_3_Unshielded
+      rect:
+        serializedVersion: 2
+        x: 98
+        y: 466
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffff5bc2576e9d970800000000000000
+      internalID: 8780302339471179775
       vertices: []
       indices: 
       edges: []

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using TreeEditor;
 using UnityEngine;
@@ -8,8 +9,10 @@ public class Player : MonoBehaviour
     [SerializeField] private Vector3 startPos;
     private Vector3 playerPos;
     private Vector3 screenPos;
+    [SerializeField] private int health;
     [SerializeField] private float speed;
     [SerializeField] private float upperLimit;
+    [SerializeField] private float lowerLimit;
     private float currentSpeed;
     [SerializeField] private SpriteRenderer currentThruster;
     [SerializeField] private Sprite[] thrusters;
@@ -28,6 +31,8 @@ public class Player : MonoBehaviour
         startPos = transform.position;
         currentSpeed = speed;
         uiManager = FindObjectOfType<UiManager>();
+        
+        uiManager.HealthBar(health);
     }
 
     // Update is called once per frame
@@ -52,9 +57,9 @@ public class Player : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, upperLimit);
         }
-        else if (transform.position.y < 0.5f)
+        else if (transform.position.y < lowerLimit)
         {
-            transform.position = new Vector3(transform.position.x, 0.5f);
+            transform.position = new Vector3(transform.position.x, lowerLimit);
         }
 
         //Stops at screen edge to the left or right of player 
@@ -141,4 +146,23 @@ public class Player : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.GetComponent<Enemy>())
+        {
+            DamagePlayer();
+        }
+    }
+
+    private void DamagePlayer()
+    {
+        health--;
+        
+        uiManager.HealthBar(health);
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
+    }
 }
