@@ -14,16 +14,28 @@ public class Player : MonoBehaviour
     [SerializeField] private float upperLimit;
     [SerializeField] private float lowerLimit;
     private float currentSpeed;
-    [SerializeField] private SpriteRenderer currentThruster;
-    [SerializeField] private Sprite[] thrusters;
+
+    [Header("Projectiles")]
     [SerializeField] private Projectile currentProjectile;
     [SerializeField] private Transform[] projectileLocations;
+    [SerializeField] private Transform specialProjectileLocation;
+    
+    [Header("Powerups")]
+    [SerializeField] private bool tripleShot = false;
+    [SerializeField] private bool speedBoost = false;
+    [SerializeField] private GameObject speedBoostThrusters;
+    private float tripleShotDuration = 0f;
+    [SerializeField] private float speedBoostDuration = 0f;
+    
+    [Header("Heat System")]
     [SerializeField] private float currentHeat = 0f;
     [SerializeField] private float totalHeat = 10f;
     private bool overHeated = false;
     private float heatTickDown = 0f;
     private float fireTimePassed;
     private UiManager uiManager;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -48,6 +60,15 @@ public class Player : MonoBehaviour
     //Controls Player Movement
     private void Movement()
     {
+        speedBoostDuration -= Time.deltaTime;
+        
+        if (speedBoost && speedBoostDuration <= 0)
+        {
+            currentSpeed = speed;
+            speedBoost = false;
+            speedBoostThrusters.SetActive(false);
+        }
+        
         //Get direction of player based on player input
         playerPos = new Vector3(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         transform.Translate(playerPos * Time.deltaTime * currentSpeed);
@@ -77,16 +98,6 @@ public class Player : MonoBehaviour
             newPos.y = transform.position.y;
             transform.position = newPos;
         }
-
-        //Thruster animation control, flips between current thruster sprites
-        if (currentThruster.sprite == thrusters[0])
-        {
-            currentThruster.sprite = thrusters[1];
-        }
-        else
-        {
-            currentThruster.sprite = thrusters[0];
-        }
     }
 
     //Controls player firing mechanic
@@ -94,6 +105,7 @@ public class Player : MonoBehaviour
     {
         //increment time
         fireTimePassed += Time.deltaTime;
+        tripleShotDuration -= Time.deltaTime;
         
         //When timer has elapsed firing delay then fire projectile(s) at firing point(s) and reset the timer
         if (Input.GetMouseButton(0) && fireTimePassed >= currentProjectile.FireDelay && !overHeated)
@@ -117,6 +129,35 @@ public class Player : MonoBehaviour
                         currentHeat = totalHeat;
                         overHeated = true;
                     }
+                }
+            }
+            
+            //If tripleshot is activated then start firing current projectile through the special fire slot. This will still work with addon weapons
+            if (tripleShot && tripleShotDuration >= 0)
+            {
+                GameObject tempProjectile = Instantiate(currentProjectile.gameObject, specialProjectileLocation.position, Quaternion.identity);
+
+                Projectile currentTempProjectile = tempProjectile.GetComponent<Projectile>();
+                
+                if (currentTempProjectile.ProducesHeat)
+                {
+                    if (currentHeat <= totalHeat)
+                    {
+                        currentHeat += currentTempProjectile.WeaponHeat;
+
+                        uiManager.WeaponCoolDown((int)currentHeat);
+                    }
+                    else
+                    {
+                        currentHeat = totalHeat;
+                        overHeated = true;
+                    }
+                }
+
+                if (tripleShotDuration < 0)
+                {
+                    tripleShot = false;
+                    tripleShotDuration = 0;
                 }
             }
 
@@ -164,5 +205,27 @@ public class Player : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+
+    public void ActivateTripleShot(float durationLeft)
+    {
+        tripleShot = true;
+        tripleShotDuration = durationLeft;
+    }
+
+    public void ActivateSpeedBoost(float durationLeft, float speedMultiplier)
+    {
+        if (!speedBoost)
+        {
+            speedBoost = true;
+            speedBoostDuration = durationLeft;
+            currentSpeed *= speedMultiplier;
+            speedBoostThrusters.SetActive(true); 
+        }
+        else
+        {
+            speedBoostDuration = durationLeft;
+        }
+        
     }
 }

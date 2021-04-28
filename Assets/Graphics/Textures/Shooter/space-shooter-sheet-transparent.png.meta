@@ -80,6 +80,33 @@ TextureImporter:
   - first:
       213: 8780302339471179775
     second: Mini_Jet_3_Unshielded
+  - first:
+      213: -2199699506267662050
+    second: Powerup Speed Booster
+  - first:
+      213: 1096499397675223248
+    second: Powerup Shield Boost
+  - first:
+      213: -6442758718804145489
+    second: Speed Boost Thruster 1
+  - first:
+      213: 7219596045205917878
+    second: Speed Boost Thruster 2
+  - first:
+      213: 1272377245678738122
+    second: Powerup Health
+  - first:
+      213: 844514249672928673
+    second: Powerup Triple Shot
+  - first:
+      213: 1617207215470093358
+    second: space-shooter-sheet-transparent_32
+  - first:
+      213: -7334105244895053995
+    second: space-shooter-sheet-transparent_33
+  - first:
+      213: 1842166784673448886
+    second: space-shooter-sheet-transparent_34
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -196,10 +223,10 @@ TextureImporter:
       name: Ship_1
       rect:
         serializedVersion: 2
-        x: 8
+        x: 6
         y: 438
-        width: 15
-        height: 19
+        width: 19
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,10 +244,10 @@ TextureImporter:
       name: Ship_2
       rect:
         serializedVersion: 2
-        x: 39
+        x: 38
         y: 437
-        width: 17
-        height: 21
+        width: 19
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,7 +268,7 @@ TextureImporter:
         x: 70
         y: 437
         width: 19
-        height: 21
+        height: 22
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -734,6 +761,195 @@ TextureImporter:
       bones: []
       spriteID: ffff5bc2576e9d970800000000000000
       internalID: 8780302339471179775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powerup Speed Booster
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 353
+        width: 9
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e19505c14f81971e0800000000000000
+      internalID: -2199699506267662050
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powerup Shield Boost
+      rect:
+        serializedVersion: 2
+        x: 34
+        y: 353
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d88cd6846c873f00800000000000000
+      internalID: 1096499397675223248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Speed Boost Thruster 1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 420
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faac0289419b696a0800000000000000
+      internalID: -6442758718804145489
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Speed Boost Thruster 2
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 420
+        width: 4
+        height: 7
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b050502a58213460800000000000000
+      internalID: 7219596045205917878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powerup Health
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 354
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca98f41d5468a110800000000000000
+      internalID: 1272377245678738122
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Powerup Triple Shot
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 353
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ada2835c3158bb00800000000000000
+      internalID: 844514249672928673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space-shooter-sheet-transparent_32
+      rect:
+        serializedVersion: 2
+        x: 390
+        y: 355
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e242b46e469717610800000000000000
+      internalID: 1617207215470093358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space-shooter-sheet-transparent_33
+      rect:
+        serializedVersion: 2
+        x: 421
+        y: 355
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55773b43326083a90800000000000000
+      internalID: -7334105244895053995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: space-shooter-sheet-transparent_34
+      rect:
+        serializedVersion: 2
+        x: 454
+        y: 355
+        width: 21
+        height: 24
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b30c713ee0b09910800000000000000
+      internalID: 1842166784673448886
       vertices: []
       indices: 
       edges: []
